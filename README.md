@@ -1,18 +1,9 @@
 
-# Stop-Watch
+# Meal - App
 
-preview : https://ajay1151998.github.io/Stop_Watch/
+preview :https://ajay1151998.github.io/Meal-App/
 
 
---Home Screen : Added Home Screen Stop Watch Image. 
-
---Add a font (digital clock).
-
---When Press the Start button Start the Timer
-
---When Press the Stop button Stop the Timer.
-
---When Press the Reset button  timer gone intial Position.
 
 
 
@@ -24,9 +15,9 @@ preview : https://ajay1151998.github.io/Stop_Watch/
 --CSS
 
 
---BOOTSTRAP
+--JQuery
 
---JAVASCRIPT
+--Vanilla JAVASCRIPT
 ## Acknowledgements
 
  - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
