@@ -1,0 +1,115 @@
+body{
+    background-color: blanchedalmond;
+}
+header{
+    background-image: linear-gradient(white,pink);
+}
+/* nav bar propeties logo and header name */
+header div{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    color: blue;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+/* anchor tag properties */
+a{
+    text-decoration: none;
+    color: blue;
+    
+}
+img{
+   width: 100%;
+   height: 100%;
+}
+
+#container{
+    margin:50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/* style external meal list(api meal list) */
+
+#meal-img-container{
+    width: 25%;
+}
+#meal-detail-container{
+    width: 55%;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+#headings{
+    width:50%;
+}
+.detail-class{
+    margin-bottom:30px;
+}
+#ins{
+    width: 40%;
+}
+/* set external image size */
+#main-image img{
+    height:300px;
+    width:300px;
+    border-radius: 50%;
+    border: 1px solid darkslategray;
+}
+
+/* Responsive design */
+@media screen and (max-width:1000px){
+    #headings{
+        width:100%;
+        margin-bottom: 20px;
+    }
+    #meal-img-container{
+        width:40%;
+    }
+    #meal-detail-container{
+        width:35%;
+    }
+    #ins{
+        width:100%;
+    }
+    #container{
+        width:90%;
+    }
+}
+/* Responsive design */
+@media screen and (max-width:700px){
+   
+    header div{
+        width:100%;
+    }
+    #meal-img-container{
+        width:70%;
+    }
+    #meal-detail-container{
+        width:70%;
+        margin-top:55px;
+    }
+    
+}
+
+@media screen and (max-width:400px){
+    header div{
+        display: block;
+        width:70%;
+        margin-left:auto;
+        height:130px;
+    }
+    #container{
+        margin:0px;
+        margin-top:50px;
+        width:100%;
+    }
+    #main-image{
+        margin:-30px;
+    }
+    #meal-detail-container{
+        width:90%;
+    }
+}
