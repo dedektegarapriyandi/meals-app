@@ -15,8 +15,6 @@ preview :https://ajay1151998.github.io/Meal-App/
 --CSS
 
 
---JQuery
-
 --Vanilla JAVASCRIPT
 ## Acknowledgements
 
