@@ -1,154 +1,137 @@
-body{
-    background-color: blanchedalmond;
-}
-/* nav bar background color */
-header{
-    background-image: linear-gradient(white,pink);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-header div{
-    width: 50%;
+/* navbar */
+.navbar, .menu {
     display: flex;
-    justify-content: space-evenly;
-    color: blue;
-    cursor: pointer;
-    font-weight: bold;
-    
+    justify-content: space-between;
+    align-items: center;
 }
-/* anchor tag properties */
-a{
-    text-decoration: none;
-    color: blue;
-    
-}
-img{
-   width: 100%;
-   height: 100%;
-}
-#take-srch{
-    text-align: center;
-}
-/* search bar properties */
-input{
-   width: 50%;
-   height: 2.2rem;
-   margin-top: 12px;
-   border-radius: 20px;
-   border: 2px solid black;
-   text-align: center;
-   font-size: 1rem;
-
-}
-#search-bar{
-    color: black;
-}
-/* search button */
-#search-btn{
-    width: 5rem;
-    height: 2.3rem;
-    border-radius: 20px;
-    border: 2px solid black;
-    font-size: 0.8rem;
-    color: blue;
-    font-weight: bolder;
-    cursor: pointer;
-}
-#search-btn:hover{
-    border: 2px solid white;
-    background-color: palevioletred;
+.navbar{
+    height: 70px;
+    background-color: #4768bb;
+    padding: 0 5%;
     color: white;
 }
-#impt{
+
+.navbar .logo {
+    font-weight: 300;
+}
+
+.menu .menu-item {
+    list-style: none;
+}
+
+.menu-item .link {
+    background-color: #1e409794;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .8);
+    padding: 1rem;
+    margin-left: .5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.menu-item .link:hover {
+    background-color: #1e4097;
+    color: white;
+}
+
+/* form cari */
+#take-srch {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search-bar{
+    color: black;
+    width: 600px;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+}
+
+#instruction{
+    margin: 1rem 0;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    background-color: rgba(0, 128, 0, .2);
+    color: green;
+}
+
+#instruction h2 {
+    margin-bottom: 1rem;
     text-align: center;
-    font-weight: bolder;
-    font-style: italic;
+}
+
+#instruction li {
+    margin-bottom: .4rem;
+}
+
+/* meals list */
+
+#meals-list, .meal-name {
+    display: flex;
+}
+#meals-list{
+    padding: 0 5%;
+    margin-top: 2rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.meal {
+    width: 280px;
+    margin: 1rem 0;
+    box-shadow: 0 0 15px rgba(0,0,0,.2);
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.meal:hover {
+    transform: scale(1.05);
+}
+
+.meal img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.meal .meal-name {
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 70px;
+}
+
+.meal-name .recipe-name {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.meal-name .fav-btn {
+    margin-right: .5rem;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.meal-name .fav-btn:hover {
     color: red;
 }
-/* style external meal list(api meal list) */
-#meals-list{
-    margin:70px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
-li{
-    list-style: none;
-    padding: 10px;
-    width: 25%;
-}
-.meal h2{
-    text-align: center;
-    margin-left: 35px;
-    cursor: pointer;
-}
-
-/* set external image size */
-li img{
-    margin-left: 30px;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: 1px solid lightgray;
-    cursor: pointer;
-}
-
-
-.meal-name{
-    display: flex;
-}
-
-.meal-name i{
-    font-size: 1.5rem;
-    margin-top: 17px;
-    margin-left: 15px;
-    cursor: pointer;
-}
-/* icon inner color when click on icon  */
+/* fav-btn clicked */
 .fas{
     color:red;
-}
-
-@media screen and (max-width:900px){
-    li{
-        width:45%;
-        margin-bottom: 5px;
-    }
-}
-/* Responsive design */
-@media screen and (max-width:600px){
-    li{
-        width:75%;
-        margin-bottom: 5px;
-        margin-left: 30px;
-    }
-    header div{
-        width:100%;
-    }
-    #meals-list{
-        margin: 30px;
-        display: flex;     
-    }
-}
-
-@media screen and (max-width:400px){
-    #meals-list{
-        margin: 0px;    
-    }
-    li{
-        margin:0px;
-        margin-bottom:10px ;
-    }
-    header div{
-        display: block;
-        width:70%;
-        margin-left:auto;
-        height:130px;
-       
-    }
-    input{
-        width:80%;
-        margin-top:35px;
-        margin-bottom: 15px;
-    }
 }

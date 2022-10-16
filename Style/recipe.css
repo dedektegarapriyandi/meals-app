@@ -1,115 +1,95 @@
-body{
-    background-color: blanchedalmond;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
-header{
-    background-image: linear-gradient(white,pink);
-}
-/* nav bar propeties logo and header name */
-header div{
-    width: 50%;
+
+/* navbar */
+.navbar, .menu {
     display: flex;
-    justify-content: space-evenly;
-    color: blue;
-    cursor: pointer;
-    font-weight: bold;
-    
+    justify-content: space-between;
+    align-items: center;
 }
-/* anchor tag properties */
-a{
+.navbar{
+    height: 70px;
+    background-color: #4768bb;
+    padding: 0 5%;
+    color: white;
+}
+
+.navbar .logo {
+    font-weight: 300;
+}
+
+.menu .menu-item {
+    list-style: none;
+}
+
+.menu-item .link {
+    background-color: #1e409794;
     text-decoration: none;
-    color: blue;
-    
+    color: rgba(255, 255, 255, .8);
+    padding: 1rem;
+    margin-left: .5rem;
+    border-radius: 5px;
+    font-size: 1rem;
 }
+
+.menu-item .link:hover {
+    background-color: #1e4097;
+    color: white;
+}
+
 img{
    width: 100%;
    height: 100%;
 }
 
 #container{
-    margin:50px;
+    margin: 2rem 0;
+    padding: 0 5%;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
 }
-/* style external meal list(api meal list) */
+
+/* Meal detail */
 
 #meal-img-container{
-    width: 25%;
+    /* flex: 1; */
+    margin-right: 2rem;
 }
 #meal-detail-container{
-    width: 55%;
+    /* width: 55%; */
     display: flex;
-    flex-wrap:wrap;
-    justify-content: space-between;
 }
 #headings{
-    width:50%;
+    flex: 1;
+    margin-right: 1rem;
+    /* width:50%; */
 }
 .detail-class{
     margin-bottom:30px;
 }
 #ins{
-    width: 40%;
+    flex: 1.5;
+    /* width: 40%; */
 }
-/* set external image size */
+
+#ins h2 {
+    margin-bottom: 1rem;
+}
+
+#ins p {
+    text-align: justify;
+}
+
+/* Ukuran gambar */
 #main-image img{
-    height:300px;
+    height: auto;
+    border-radius: 10px;
     width:300px;
-    border-radius: 50%;
-    border: 1px solid darkslategray;
-}
-
-/* Responsive design */
-@media screen and (max-width:1000px){
-    #headings{
-        width:100%;
-        margin-bottom: 20px;
-    }
-    #meal-img-container{
-        width:40%;
-    }
-    #meal-detail-container{
-        width:35%;
-    }
-    #ins{
-        width:100%;
-    }
-    #container{
-        width:90%;
-    }
-}
-/* Responsive design */
-@media screen and (max-width:700px){
-   
-    header div{
-        width:100%;
-    }
-    #meal-img-container{
-        width:70%;
-    }
-    #meal-detail-container{
-        width:70%;
-        margin-top:55px;
-    }
     
-}
-
-@media screen and (max-width:400px){
-    header div{
-        display: block;
-        width:70%;
-        margin-left:auto;
-        height:130px;
-    }
-    #container{
-        margin:0px;
-        margin-top:50px;
-        width:100%;
-    }
-    #main-image{
-        margin:-30px;
-    }
-    #meal-detail-container{
-        width:90%;
-    }
+    box-shadow: 0 0 25px rgba(0,0,0,.5);
 }

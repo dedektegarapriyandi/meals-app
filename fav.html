@@ -11,24 +11,27 @@
 <body>
     <!-- main div -->
     <div id="main-cnt">
-    <header>
-        <div>
-            <!-- logo -->
-            <h2><img src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/000000/external-hot-food-the-new-normal-travel-and-tourism-parzival-1997-outline-color-parzival-1997.png"/></h2>
-                <h2>Meal App</h2>
-                <h2><a href="index.html">Home Page</a></h2>
-                <h2><a href="fav.html">My Favourite Recipe</a></h2>
-        </div>
-    </header>
+        <header class="navbar">
+            <div class="logo">
+                <h1>Meal App</h1>
+            </div>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="index.html" class="link">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="fav.html" class="link">Resep Favorit</a>
+                </li>
+            </ul>
+        </header>
+    </div>
     <div id="container">
-         <!-- Api meal list access -->
-        <ul id="meals-list">
-
-        </ul>
+         <!-- Makanan Favorit -->
+         <h1 class="heading">Makanan Favorit</h1>
+        <fav-meals id="meals-list"></fav-meals>
     </div>
 
-    </div>
-    <!-- link external js code -->
+
     <script src="Js/fav.js"></script>
 </body>
 </html>

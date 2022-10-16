@@ -9,36 +9,40 @@
     <title>Meal App</title>
 </head>
 <body>
+
     <!-- main div -->
     <div id="main-cnt">
-        <header>
-            <div>
-                <!-- logo -->
-                <h2><img src="https://img.icons8.com/external-parzival-1997-outline-color-parzival-1997/64/000000/external-hot-food-the-new-normal-travel-and-tourism-parzival-1997-outline-color-parzival-1997.png"/></h2>
-                <h2>Meal App</h2>
-                <h2><a href="index.html">Home Page</a></h2>
-                <h2><a href="fav.html">My Favourite Recipe</a></h2>
+        <header class="navbar">
+            <div class="logo">
+                <h1>Meal App</h1>
             </div>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="index.html" class="link">Home</a>
+                </li>
+                <li class="menu-item">
+                    <a href="fav.html" class="link">Resep Favorit</a>
+                </li>
+            </ul>
         </header>
         <div id="container">
-            <div id="take-srch">
-                <!-- search bar -->
-                <input type="text" id="search-bar" placeholder="Enter Your Meal Name">
-                <!-- button -->
-                <button id="search-btn">Search</button>
+            <div class="content">
+                <div id="take-srch">
+                    <!-- instruksi -->
+                    <ul id="instruction">
+                        <h2>Instruksi!</h2>
+                        <li>Masukkan setidaknya dua karakter</li>
+                        <li>Klik nama makanan untuk melihat lebih lengkap</li>
+                    </ul>
+                    <!-- form cari -->
+                    <input type="text" id="search-bar" placeholder="Cari Nama Makanan" autofocus>
+                </div>
+                <!-- Api meal list -->
+                <meals-list id="meals-list"></meals-list>
             </div>
-            <!-- important instrction -->
-            <div id="impt">
-               <h3>! Please Enter Atleast Two Character</h3>
-               <h3>Imp : If you want to know more About Meals, then click on meal Name</h3>
-            </div>
-            <!-- Api meal list access -->
-            <ul id="meals-list">
-
-            </ul>
         </div>
     </div>
-    <!-- link external js code -->
+
     <script src="Js/index.js"></script>
 </body>
 </html>
